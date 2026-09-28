@@ -4,7 +4,7 @@
 
 | Member | GitHub Username | File |
 |---|---|---|
-| Ye Zayar Aung | yezayar191004 | bank.py, test_deposit.py |
+| Ye Zayar Aung | yezayar191004 | bank.py, test_deposit.py ,.gitignore|
 |Thet Htoo Naing  | 6705140009-thn | test_withdraw.py |
 | Paing Thu Kha Kyaw | Flexxzzzz | test_teardown.py |
 | Kyawt Kay Khine | 6704140042-lgtv| test_shared.py |
