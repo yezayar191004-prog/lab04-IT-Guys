@@ -18,13 +18,13 @@ IT-Guys
 
 ### Overview of Conflicts Solved
 
-During the collaborative workflow, all members edited the `README.md` file at nearly the same time while adding their own rows into the `Who Did What` table. Because everyone changed the same section of the same file, multiple merge conflicts occurred. This is a normal situation in Git when teammates work on the same file without pulling the latest version first.
+Throughout the collaborative workflow, every team member edited the `README.md` file at roughly the same time while adding their own row to the `Who Did What` table. Because all of us changed the same section of the same file, multiple merge conflicts occurred. This is a normal part of working in a shared Git repository when team members update the same lines before pulling the latest changes.
 
-The conflicts were not caused by a mistake in the team work. They happened because each person updated the same adjacent lines in the table, so Git could not decide automatically which version should remain.
+The conflicts were not caused by a mistake in the group work. They happened because each person made changes in the same part of the table, and Git had to stop to prevent overwriting someone else's work.
 
-### Conflict 1: Team Members Editing the Same Table Row
+### Conflict 1: Two Members Editing the Same Section
 
-When Ye Zayar Aung and Thet Htoo Naing both updated the README table at the same time, Git stopped the merge and added conflict markers.
+Ye Zayar Aung and Thet Htoo Naing both updated the table at the same time, so Git inserted conflict markers into the file.
 
 ```text
 <<<<<<< HEAD
@@ -36,13 +36,13 @@ When Ye Zayar Aung and Thet Htoo Naing both updated the README table at the same
 
 ### Breakdown of the Markers
 
-- `<<<<<<< HEAD` marks the local version currently in the branch.
+- `<<<<<<< HEAD` marks the local version from the current branch.
 - `=======` separates the two conflicting versions.
-- `>>>>>>> 4f1a2c9` marks the incoming version from another teammate's commit.
+- `>>>>>>> 4f1a2c9` marks the incoming version from the other teammate's commit.
 
-### Conflict 2: Another Team Member Added a Different Row in the Same Region
+### Conflict 2: Another Group Member Added a New Row in the Same Region
 
-A second conflict happened when Paing Thu Kha Kyaw, Kyawt Kay Khine, and Kaung Myat Hein added their rows into the same table block at the same time. Because all of them changed the same area, Git could not merge them automatically.
+Paing Thu Kha Kyaw and Kyawt Kay Khine changed the same part of the table at the same time, which caused another merge conflict.
 
 ```text
 <<<<<<< HEAD
@@ -52,18 +52,30 @@ A second conflict happened when Paing Thu Kha Kyaw, Kyawt Kay Khine, and Kaung M
 >>>>>>> 58b31ef
 ```
 
+### Conflict 3: Final Team Member Row Collided With Existing Content
+
+Kaung Myat Hein also added a row to the same table section while others were still working on the README. Git stopped again because multiple edits overlapped in the same area.
+
+```text
+<<<<<<< HEAD
+| Kaung Myat Hein | kmhein122 | conftest.py |
+=======
+| Ye Zayar Aung | yezayar191004 | bank.py, test_deposit.py, .gitignore |
+>>>>>>> 9ca42cb
+```
+
 ### Final Decision Made by the Team
 
-The team reviewed both versions and decided to:
+The team reviewed all versions and decided to:
 
-1. Keep every correct row from every team member.
-2. Remove all Git conflict markers.
-3. Merge all table rows into one final, clean version.
-4. Preserve the documentation in a readable and professional format.
+1. Keep every correct row from each group member.
+2. Remove all conflict markers from the final file.
+3. Merge the rows into one clean table.
+4. Keep the README readable and professional.
 
 ### Why Git Could Not Automatically Resolve It
 
-Git could not resolve these conflicts automatically because multiple teammates changed the same lines in the README file at the same time. The file had several different versions of the same section, and Git had no safe way to choose one version without risking losing someone else's work. Because of that, Git stopped and required the team to resolve the conflict manually.
+Git could not resolve these conflicts automatically because every member edited the same section of the file at nearly the same time. The table had several different versions of the same area, and Git had no safe way to know which row should stay without risking the loss of another teammate's work. Because of this, Git stopped the merge and required a manual resolution.
 
 ## 4. Git Contribution Summary
 
