@@ -1,6 +1,10 @@
 # lab04-IT-Guys
 
-## Who Did What
+## 1. Group Name
+
+IT-Guys
+
+## 2. Who Did What
 
 | Member | GitHub Username | File |
 |---|---|---|
@@ -10,11 +14,15 @@
 | Kyawt Kay Khine | 6704140042-lgtv | test_shared.py |
 | Kaung Myat Hein | kmhein122 | conftest.py |
 
-## Our Merge Conflict
+## 3. Our Merge Conflict
 
-When we were all pushing changes to the same README.md file at roughly the same time, Git noticed that different members had edited the same table section. Because each person added their own row to the same part of the file, the repository had two different versions of the same lines.
+### Overview of Conflicts Solved
 
-This is what the conflict looked like in Git:
+Throughout the group work, the team encountered and resolved a merge conflict while editing the same section of the README file at the same time. In collaborative Git work, this happens when different team members change the same lines before pulling the latest update.
+
+### Conflict Markers Encountered
+
+When Git detected two different versions of the same table section, it inserted conflict markers into the file:
 
 ```text
 <<<<<<< HEAD
@@ -24,25 +32,50 @@ This is what the conflict looked like in Git:
 >>>>>>> 123abc
 ```
 
-Git could not decide automatically which version should stay because both edits were changing the same section of the file. We fixed it by reading both versions, keeping both team rows, and removing the conflict markers. In the final file, both rows remained because each row belonged to a different group member and both were correct.
+### Breakdown of the Markers
 
-## Git Contribution Summary
+- `<<<<<<< HEAD` marks the beginning of the conflicting section from the current local branch.
+- `=======` separates the local version from the incoming version from GitHub.
+- `>>>>>>> 123abc` marks the end of the incoming change from another commit.
+
+### Final Decision Made by the Team
+
+The team reviewed both versions and decided to:
+
+1. Keep all member rows that belonged to the correct group members.
+2. Remove the conflict markers.
+3. Keep the final table clean and readable.
+4. Preserve both versions of the changed text in one merged result.
+
+### Why Git Could Not Automatically Resolve It
+
+Git could not resolve this automatically because both group members edited the same lines in `README.md` around the table section. Since the changes happened in the same area, Git had no clear way to know which version should remain without risking data loss. Because of that, Git stopped the merge and asked the team to resolve it manually.
+
+## 4. Git Contribution Summary
 
 ```text
 $ git shortlog -sn
      1  Ye Zayar Aung
 ```
 
-## Reflection Questions
+## 5. Answers to Lab Questions
 
-1. Why was your push rejected, and how did you fix it?  
-   A push can be rejected when GitHub has newer commits than your local repository. I fixed it by pulling the latest changes, resolving any differences, and then pushing again.
+### 1. Why was your push rejected, and how did you fix it?
 
-2. Why could Git not resolve the README conflict automatically?  
-   Git could not decide between two different edits to the same lines, so it paused and required a human to merge the two versions manually.
+The push was rejected because the remote repository had new commits that were not present in the local repository. We fixed it by pulling the latest changes, resolving the conflict, and then pushing again.
 
-3. What is the difference between committing and pushing?  
-   A commit saves a snapshot in the local repository, while pushing uploads those saved commits to the remote GitHub repository so teammates can see them.
+### 2. Why could Git not resolve the README conflict automatically?
 
-4. How do fixtures reduce duplicated setup code in tests?  
-   Fixtures provide a reusable setup function, so tests can share the same object creation and initialization logic without rewriting it in every test.
+Git could not resolve the README conflict automatically because different team members edited the same part of the file at the same time. Because both edits affected the same lines, Git required a human to decide the final result.
+
+### 3. What is the difference between committing and pushing?
+
+Committing saves a snapshot of the changes locally on the computer, while pushing uploads those saved commits to GitHub so teammates can see them.
+
+### 4. How do fixtures reduce duplicated setup code in tests?
+
+Fixtures provide a reusable setup function that can be used by multiple tests. This reduces repeated code and makes the tests cleaner, easier to read, and easier to maintain.
+
+## 6. Final Repository Link
+
+https://github.com/yezayar191004-prog/lab04-IT-Guys.git
