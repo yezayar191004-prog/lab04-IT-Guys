@@ -4,8 +4,11 @@
 
 | Member | GitHub Username | File |
 |---|---|---|
-| Avaxmeom | yezayar191004 | bank.py, test_deposit.py, test_withdraw.py, test_teardown.py, test_shared.py, conftest.py |
-
+| Ye Zayar Aung | yezayar191004 | bank.py, test_deposit.py |
+|Thet Htoo Naing  | 6705140009-thn | test_withdraw.py |
+| Paing Thu Kha Kyaw | Flexxzzzz | test_teardown.py |
+| Kyawt Kay Khine | 6704140042-lgtv| test_shared.py |
+| Kaung Myat Hein | kmhein122 | conftest.py |
 ## Our Merge Conflict
 
 During the collaborative README update, Git detected that two different edits were being made to the same section of the file. The conflict markers looked like this:
